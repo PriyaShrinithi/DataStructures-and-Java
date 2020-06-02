@@ -5,3 +5,6 @@
   
 2. Hashset:
   An Attempt at building a HashSet Data structure using arrays.
+
+3. InvertTree:
+  Inverting a Binary Tree using recursion.  
