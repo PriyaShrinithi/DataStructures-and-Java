@@ -8,3 +8,6 @@
 
 3. InvertTree:
   To Invert a Binary Tree using recursion.  
+  
+ 4. SearchBST:
+  Search a Binary Tree for a node of a value and return the subtree of the node.
