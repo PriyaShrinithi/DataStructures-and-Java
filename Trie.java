@@ -1,57 +1,56 @@
-package com.company;
+class Trie {
 
-class Trie
-{
-    private TrieNode root;
+    /** Initialize your data structure here. */
     class TrieNode
     {
         boolean EndOfWord;
         TrieNode [] child = new TrieNode[26];
     }
-    public Trie()
+    private TrieNode root;
+    public Trie() 
     {
         root = new TrieNode();
     }
-
-    public void insert(String word)
+    
+    /** Inserts a word into the trie. */
+    public void insert(String word) 
     {
         TrieNode crawl = root;
         for(int i = 0;i<word.length();i++)
         {
-            int i_i = word.charAt(i)-'a'; //returns difference of ascii
-            if(crawl.child[i_i]==null)
-                crawl.child[i_i] = new TrieNode();
-            crawl = crawl.child[i_i];
+            int index = word.charAt(i)-'a';
+            if(crawl.child[index]==null)
+                crawl.child[index] = new TrieNode();
+            crawl = crawl.child[index];
         }
-        crawl.EndOfWord = true;
+         crawl.EndOfWord = true;
     }
-
-    public boolean search(String word)
+    
+    /** Returns if the word is in the trie. */
+    public boolean search(String word) 
     {
         TrieNode crawl = root;
-        for(int i = 0;i<word.length();i++)
-        {
-            int i_i = word.charAt(i)-'a'; //returns difference of ascii
-            if(crawl.child[i_i]==null)
+        for(int i=0;i<word.length();i++)
+        {   
+            int index = word.charAt(i)-'a';
+            if(crawl.child[index]==null)
                 return false;
-            crawl = crawl.child[i_i];
+            crawl = crawl.child[index];
         }
         return crawl.EndOfWord;
     }
-
-
-    public boolean startsWith(String prefix)
+    
+    /** Returns if there is any word in the trie that starts with the given prefix. */
+    public boolean startsWith(String prefix) 
     {
         TrieNode crawl = root;
         for(int i = 0;i<prefix.length();i++)
         {
-            int i_i = prefix.charAt(i)-'a'; //returns difference of ascii
-            if(crawl.child[i_i]==null)
+            int index = prefix.charAt(i)-'a';
+            if(crawl.child[index]==null)
                 return false;
-            crawl = crawl.child[i_i];
+            crawl = crawl.child[index];
         }
         return true;
     }
 }
-
-
