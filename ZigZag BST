@@ -1,0 +1,42 @@
+class BST
+{
+    List<List<Integer>> level;
+    public List<List<Integer>> zigzagLevelOrder(TreeNode root)
+    {
+        level = new ArrayList<>();
+        Queue <TreeNode> q = new LinkedList<>();
+        if(root==null)
+            return level;
+        int count =0;
+        q.offer(root);
+        bfs(q, false);
+        
+        return level;
+    }
+    
+    private void bfs(Queue <TreeNode> Q, boolean boo)
+    {
+        Queue <TreeNode> next = new LinkedList<>();
+        List <Integer> list = new ArrayList<>();
+        while(!Q.isEmpty())
+        {
+            TreeNode current = Q.poll();
+            if(!boo)
+                list.add(current.val);
+            else 
+                list.add(0, current.val);
+            
+            if(current.left!=null)
+                next.add(current.left);
+            if(current.right!=null)
+                next.add(current.right);
+            if(Q.isEmpty())
+            {
+                level.add(list);
+                bfs(next, !boo);
+            }
+            
+        }
+    }
+}
+    
