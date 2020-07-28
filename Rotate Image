@@ -1,0 +1,45 @@
+class RotateImage 
+{
+    public void rotate(int[][] matrix) 
+    {
+        int rows = matrix.length;
+        int columns  = matrix[0].length;
+        
+        int k = columns-1;
+        
+        for(int i = 0;i<k;i++)
+        {
+            for(int j = 0;j<rows;j++)
+            {
+                swap(matrix, i, j, k);
+            }
+            k--;
+        }
+        
+        for(int i = 0;i<rows;i++)
+        {
+            for(int j = 0;j<i;j++)
+            {
+                swap(matrix, i, j);
+            }
+        }
+    }
+    
+    private void swap(int [][] A, int i, int j, int k)
+    {
+        //if(i==k)
+          //  return;
+        int c = A[i][j];
+        A[i][j] = A[k][j];
+        A[k][j] = c;
+    }
+    
+    private void swap(int [][]A, int i, int j)
+    {
+        if(i==j)
+            return;
+        int c = A[i][j];
+        A[i][j] = A[j][i];
+        A[j][i] = c;
+    }
+}
