@@ -14,3 +14,5 @@
 
 5. Trie:
   Trie is a DataStructure used for word completion and pattern recognition. It is constructed using Arrays and References. Though the memory space utilized is huge[O(number of nodes x number of references)], it is compensated by the low Time complexity [Insert: O(length of longest word x number of words) Search: O(length of the word x number of words)].
+
+6. 
