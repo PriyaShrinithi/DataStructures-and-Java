@@ -23,3 +23,5 @@
  8. Rotate Image:
  
  9. Build BST with inorder and postorder traversal:
+
+10. Design of Browser History:
