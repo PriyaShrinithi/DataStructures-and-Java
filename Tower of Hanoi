@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class TowerOfHanoi {
+
+    public static void main(String[] args) 
+    {
+        Scanner scan  = new Scanner(System.in);
+        int n = scan.nextInt();
+        hanoi(n, 'A', 'B', 'C');
+    }
+    
+    private static void hanoi(int n, char a, char b, char c)
+    {
+        if(n==1)
+        {
+            System.out.println("Moving ring "+n+" from "+a+" to "+b);
+            return;
+        }
+        hanoi(n-1, a, c, b);
+        System.out.println("Moving ring "+n+" from "+a+" to "+b);
+        hanoi(n-1, c, b, a);
+            
+    }
+}
