@@ -27,3 +27,5 @@
 10. Design of Browser History:
 
 11. Regex Matching: Recursion
+
+12. Tower Of Hanoi: 
