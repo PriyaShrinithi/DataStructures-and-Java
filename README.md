@@ -29,3 +29,6 @@
 11. Regex Matching: Recursion
 
 12. Tower Of Hanoi: 
+
+13: Graph:
+  Constructed a graph using adjacency list and traversed it using dfs. (TO DO: TRAVERSE IN BFS)
