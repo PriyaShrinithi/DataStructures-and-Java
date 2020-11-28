@@ -1,0 +1,36 @@
+class MinStack {
+
+    /** initialize your data structure here. */
+    Deque <Integer> stack; 
+    Deque <Integer> min_stack; 
+    public MinStack() 
+    {
+       stack = new ArrayDeque<Integer>();
+        min_stack = new ArrayDeque<Integer>();
+    }
+    
+    public void push(int x) 
+    {
+        if(min_stack.isEmpty()||min_stack.peek()>=x)
+            min_stack.push(x);
+        
+        stack.push(x);
+    }
+    
+    public void pop() 
+    {
+        int top = stack.pop();
+        if(min_stack.peek()==top)
+            top = min_stack.pop();
+    }
+    
+    public int top() 
+    {
+        return stack.peek();
+    }
+    
+    public int getMin() 
+    {
+        return min_stack.peek();
+    }
+}
