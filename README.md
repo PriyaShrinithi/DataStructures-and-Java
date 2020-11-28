@@ -30,5 +30,8 @@
 
 ### 12. Tower Of Hanoi: 
 
-### 13: Graph:
+### 13. Graph:
     Constructed a graph using adjacency list and traversed it using dfs. (TO DO: TRAVERSE IN BFS)
+    
+### 14. Min Stack:
+    Built a minStack DataStructure that returns least value of the stack in minimum time (HOW? Using another stack that stores only the least values in it)
