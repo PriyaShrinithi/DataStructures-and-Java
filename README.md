@@ -36,3 +36,6 @@
     
 ### 14. Min Stack:
     Built a minStack DataStructure that returns least value of the stack in minimum time (HOW? Using another stack that stores only the least values in it)
+    
+### 15. K Center Problem:
+    This is DP based approximation Problem wherein the output returned is not an optimum solution but is close to it. This is done to reduce computation time by settling to a good enough solution instead of the best
