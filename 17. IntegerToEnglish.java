@@ -30,7 +30,6 @@ public class IntegerToEnglish
     private String intToEng(Stack <Integer> number, String english, int place, int batch, int prev){
         if(number.empty())
             return english.substring(0, english.length()-1);
-        int p = 0;
         int n = 0;
         int r = 0;
         n = number.pop();
