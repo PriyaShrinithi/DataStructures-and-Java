@@ -41,6 +41,7 @@
     This is DP based approximation Problem wherein the output returned is not an optimum solution but is close to it. This is done to reduce computation time by settling to a good enough solution instead of the best
 
 ### 16. AutoComplete System:
+    Based off trie DataStructure
 
 ### 17. Integer to English:
     Push the number into a stack (Timecomplexity: O(n)). If batch is One, do not add the batchName at the end. If place is Ten convert n into a double digit number and find the corresponding String. If place is Ten and n is 1, pop the top and do n*=10+top and find the corresponding String. If place is Hundred find string corresponding to n and add place String next to it. Continue till stack is popped completely. (TimeComplexity: O(n)). Ergo Overall Timecomplexity is O(n)
