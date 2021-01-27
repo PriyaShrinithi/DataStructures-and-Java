@@ -43,4 +43,9 @@
 ### 16. AutoComplete System:
 
 ### 17. Integer to English:
-    Push the number into a stack (Timecomplexity: O(n)). If batch is One, do not add the batchName at the end. If place is Ten convert n into a double digit number and find the corresponding String. If place is Ten and n is 1, pop the top and do n*=10+top and find the corresponding String. If place is Hundred find string corresponding to n and add place String next to it. Continue till stack is popped completely. (TimeComplexity: O(n)). Ergo Overall Timecomplexity is O(n)   
+    Push the number into a stack (Timecomplexity: O(n)). If batch is One, do not add the batchName at the end. If place is Ten convert n into a double digit number and find the corresponding String. If place is Ten and n is 1, pop the top and do n*=10+top and find the corresponding String. If place is Hundred find string corresponding to n and add place String next to it. Continue till stack is popped completely. (TimeComplexity: O(n)). Ergo Overall Timecomplexity is O(n)
+    
+### 18. NQueens
+    Problem: Place n queens in a nxn board such that no 2 queens are attacking
+    Backtracking solution: Add column to a column list. If it fits, go to the next row. Else remove the last added item from the list and check the validity of the next column. 
+        If list size is n, then fill in corresponding queens ans spaces. Else, end the recursion
