@@ -50,3 +50,7 @@
     Problem: Place n queens in a nxn board such that no 2 queens are attacking
     Backtracking solution: Add column to a column list. If it fits, go to the next row. Else remove the last added item from the list and check the validity of the next column. 
         If list size is n, then fill in corresponding queens ans spaces. Else, end the recursion
+
+### 19. TotalQueens:
+    Find all possibilities of NQueens.
+    Backtracking solution: Same as NQueens, except, simply count all if row is n and col.size() is n, increment count
