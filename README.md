@@ -54,3 +54,9 @@
 ### 19. TotalQueens:
     Find all possibilities of NQueens.
     Backtracking solution: Same as NQueens, except, simply count all if row is n and col.size() is n, increment count
+
+### 20. WildcardMatching DP
+    TimeComplexity: O(sp)
+    Algorithm: 
+    * create a 2d array of size: p.length()+1 and s.length()+1. Fill cell of the first row and column to be true and the rest of the first row as false. As long as no character is '*', fill the first column as false as well. If character at p is '*', then, set the cell with the cntents if the cell directly above it. 
+    For every other cell
