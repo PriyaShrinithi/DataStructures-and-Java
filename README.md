@@ -58,5 +58,11 @@
 ### 20. WildcardMatching DP
     TimeComplexity: O(sp)
     Algorithm: 
-    * create a 2d array of size: p.length()+1 and s.length()+1. Fill cell of the first row and column to be true and the rest of the first row as false. As long as no character is '*', fill the first column as false as well. If character at p is '*', then, set the cell with the cntents if the cell directly above it. 
-    For every other cell
+    - create a 2d array of size: p.length()+1 and s.length()+1. 
+    - Fill cell of the first row and column to be true and the rest of the first row as false. 
+    - As long as no character is '*', fill the first column as false as well. 
+    - If character at p is '*', then, set the cell with the contents of the cell directly above it [i-1][0]
+    - For every other cell
+        -> if characters of p and s match, or if character of p is '?', then fill the cell with contents of the cell diagonally above it [i-1][j-1]
+        -> if character of p is '*', then fill the contents of the cell with either the conents of the cell directly to the lft or directly above it. [i-1][j]||[i][j-1]
+        -> else fill cell with false
