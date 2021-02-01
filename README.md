@@ -1,7 +1,9 @@
 # DataStructures-and-Java
 
 ### 1. Insertion Sort:
-    The idea is to use the same logic as Sorting playing cards. Move an element as left as possible until, no other element is less than that element.  The solution uses 2 loops, which increases the computation time. Insertion sort is an inplace algorithm, i.e Swapping occurs with no external memory usage.
+    - The idea is to use the same logic as Sorting playing cards. 
+    - Move an element as left as possible until, no other element is less than that element.  
+    - The solution uses 2 loops, which increases the computation time. Insertion sort is an inplace algorithm, i.e Swapping occurs with no external memory usage.
   
 ### 2. Hashset:
     An Attempt at building a HashSet Data structure using arrays.
@@ -13,7 +15,9 @@
     Search a Binary Tree for a node of a value and return the subtree of the node.
 
 ### 5. Trie:
-    Trie is a DataStructure used for word completion and pattern recognition. It is constructed using Arrays and References. Though the memory space utilized is huge[O(number of nodes x number of references)], it is compensated by the low Time complexity [Insert: O(length of longest word x number of words) Search: O(length of the word x number of words)].
+    - Trie is a DataStructure used for word completion and pattern recognition. 
+    - It is constructed using Arrays and References. Though the memory space utilized is huge[O(number of nodes x number of references)], it is compensated by the low Time complexity 
+    - [Insert: O(length of longest word x number of words) Search: O(length of the word x number of words)].
 
 ### 6. Level Order BST:
     Level Order BST is Essentially a traversal method of bst that follows 
@@ -38,13 +42,19 @@
     Built a minStack DataStructure that returns least value of the stack in minimum time (HOW? Using another stack that stores only the least values in it)
     
 ### 15. K Center Problem:
-    This is DP based approximation Problem wherein the output returned is not an optimum solution but is close to it. This is done to reduce computation time by settling to a good enough solution instead of the best
+    - This is DP based approximation Problem wherein the output returned is not an optimum solution but is close to it. 
+    - This is done to reduce computation time by settling to a good enough solution instead of the best
 
 ### 16. AutoComplete System:
     Based off trie DataStructure
 
 ### 17. Integer to English:
-    Push the number into a stack (Timecomplexity: O(n)). If batch is One, do not add the batchName at the end. If place is Ten convert n into a double digit number and find the corresponding String. If place is Ten and n is 1, pop the top and do n*=10+top and find the corresponding String. If place is Hundred find string corresponding to n and add place String next to it. Continue till stack is popped completely. (TimeComplexity: O(n)). Ergo Overall Timecomplexity is O(n)
+    - Push the number into a stack (Timecomplexity: O(n)). 
+    - If batch is One, do not add the batchName at the end. 
+    - If place is Ten convert n into a double digit number and find the corresponding String. 
+    - If place is Ten and n is 1, pop the top and do n*=10+top and find the corresponding String. 
+    - If place is Hundred find string corresponding to n and add place String next to it. 
+    - Continue till stack is popped completely. (TimeComplexity: O(n)). Ergo Overall Timecomplexity is O(n)
     
 ### 18. NQueens
     Problem: Place n queens in a nxn board such that no 2 queens are attacking
