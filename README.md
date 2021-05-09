@@ -76,3 +76,9 @@
         -> if characters of p and s match, or if character of p is '?', then fill the cell with contents of the cell diagonally above it [i-1][j-1]
         -> if character of p is '*', then fill the contents of the cell with either the conents of the cell directly to the lft or directly above it. [i-1][j]||[i][j-1]
         -> else fill cell with false
+        
+### 21. BalancedSplitString
+    Problem: Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
+             Given a balanced string s, split it in the maximum amount of balanced strings.
+             Return the maximum amount of split balanced strings.
+    TimeComplexity: O(n), where n =  string length
