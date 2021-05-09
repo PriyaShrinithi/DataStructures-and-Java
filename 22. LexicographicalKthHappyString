@@ -1,4 +1,4 @@
-public class LexicographicalKthString{
+public class LexicographicalKthHappyString{
     //happy --> contains only a|b|c and s[i]!=s[i+1], where i = 1 to s.length-1
     public String getHappyString(int n, int k) {
         //make happy!
