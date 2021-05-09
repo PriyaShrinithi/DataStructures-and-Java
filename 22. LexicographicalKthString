@@ -1,0 +1,32 @@
+public class LexicographicalKthString{
+    //happy --> contains only a|b|c and s[i]!=s[i+1], where i = 1 to s.length-1
+    public String getHappyString(int n, int k) {
+        //make happy!
+        List<String> allHappy = new ArrayList<>();
+        allHappy = getAllHappy(n);
+        if(k>allHappy.size())
+            return "";
+        return allHappy.get(k-1);
+    }
+
+    private List<String> getAllHappy(int n){ //in lexicographical order
+        char [] hChar = new char []{'a', 'b', 'c'};
+        List <String> happy = new ArrayList<>();
+        for(char item: hChar){
+            happy.add(Character.toString(item));
+        }
+        for(int i=2;i<n+1;i++){
+            List <String> happy_iter = new ArrayList<>();
+            for(String s: happy){
+                for(char c: hChar){
+                    if(s.charAt(s.length()-1)!=c)
+                        happy_iter.add(s+c);
+                }
+            }
+            happy =  happy_iter;
+        }
+        System.out.println(happy);
+        return happy;
+    }
+
+}
