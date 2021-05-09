@@ -82,3 +82,8 @@
              Given a balanced string s, split it in the maximum amount of balanced strings.
              Return the maximum amount of split balanced strings.
     TimeComplexity: O(n), where n =  string length
+
+### 22. LexicographicalKthHappyString
+    Problem: 
+        - Happy Strings: Strings that contain only a|b|c and s[i]!=s[i+1], where i = 0 to s.length-1
+        - Given a Stringlength n and an index k, find the kth happy string from a lexicographically arranged happy string list
