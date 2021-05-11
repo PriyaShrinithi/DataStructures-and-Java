@@ -90,3 +90,5 @@
 
 ### 23. MergeSort
     Algorithm: Splits the array into sub arrays and compares the elements if the subarray
+    Time Complexity: O(nlogn)
+    Space Complexity: O(n)
