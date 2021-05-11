@@ -3,7 +3,10 @@
 ### 1. Insertion Sort:
     - The idea is to use the same logic as Sorting playing cards. 
     - Move an element as left as possible until, no other element is less than that element.  
-    - The solution uses 2 loops, which increases the computation time. Insertion sort is an inplace algorithm, i.e Swapping occurs with no external memory usage.
+    - The solution uses 2 loops, which increases the computation time. Insertion sort is an inplace algorithm,
+    -  i.e Swapping occurs with no external memory usage.
+    Time Complexity: 0(n power 2)
+    Space Complexity: O(1)
   
 ### 2. Hashset:
     An Attempt at building a HashSet Data structure using arrays.
@@ -92,3 +95,11 @@
     Algorithm: Splits the array into sub arrays and compares the elements if the subarray
     Time Complexity: O(nlogn)
     Space Complexity: O(n)
+    
+### 24. BubbleSort
+    Algorithm: 
+        - Repeated swapping of each element for n power 2 times, 
+        - if A[outer_loop_index] < A[inner_loop_index] 
+        - Basically, if adjacent elements are in wrong order, we swap
+    Time Complexity: O(n power 2)
+    Space Complexity: O(1)
