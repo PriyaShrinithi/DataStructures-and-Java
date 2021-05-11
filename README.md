@@ -87,3 +87,6 @@
     Problem: 
         - Happy Strings: Strings that contain only a|b|c and s[i]!=s[i+1], where i = 0 to s.length-1
         - Given a Stringlength n and an index k, find the kth happy string from a lexicographically arranged happy string list
+
+### 23. MergeSort
+    Algorithm: Splits the array into sub arrays and compares the elements if the subarray
