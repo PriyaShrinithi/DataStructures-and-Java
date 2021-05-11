@@ -1,0 +1,60 @@
+public class MergeSort {
+    void getArray(int n){
+        Scanner scan = new Scanner(System.in);
+        int [] A = new int[n];
+        for(int i = 0;i<n;i++){
+            A[i] = scan.nextInt();
+        }
+        partition(A);
+    }
+
+    private void partition(int [] A){
+        System.out.println("\n"+ Arrays.toString(A));
+        if(A.length>1){
+            int mid = A.length/2;
+            int [] left = new int [mid];
+            int [] right = new int [A.length-mid];
+            for(int i = 0;i<mid;i++){
+                left[i] = A[i];
+            }
+            for(int i = mid;i<A.length;i++){
+                //System.out.println(i+" - "+mid+" = "+(i-mid));
+                right[i-mid] = A[i];
+            }
+            System.out.println("left: "+Arrays.toString(left)+" right: "+Arrays.toString(right));
+            partition(left);
+            partition(right);
+            merge(left, right, A);
+        }
+    }
+
+    private void merge(int [] left, int [] right, int [] A){
+        //compare and allocate in main array
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while(i<left.length && j<right.length){
+            System.out.println("\n"+Arrays.toString(left)+" "+Arrays.toString(right));
+            if(left[i]<=right[j]){
+                A[k] = left[i];
+                i++;
+            }
+            else{
+                A[k] = right[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<left.length){ //left overs
+            A[k] = left[i];
+            i++;
+            k++;
+        }
+        while(j<right.length){ //lefts overs
+            A[k] = right[j];
+            j++;
+            k++;
+        }
+        System.out.print(Arrays.toString(A));
+    }
+}
