@@ -1,0 +1,20 @@
+class SumRootToLeafNumbers {
+    
+    int sum = 0;
+    public int sumNumbers(TreeNode root) {
+        sumNum(root, 0);
+        return sum;
+    }
+    private void sumNum(TreeNode root, int intermediate){
+        if(root!=null){
+            intermediate*=10;
+            intermediate+=root.val;
+            if(root.left==null && root.right==null){
+                sum+=intermediate;
+            }
+            System.out.println(intermediate);
+            sumNum(root.left, intermediate);
+            sumNum(root.right, intermediate);
+        }
+    }
+}
