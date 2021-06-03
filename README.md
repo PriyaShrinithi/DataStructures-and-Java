@@ -103,3 +103,11 @@
         - Basically, if adjacent elements are in wrong order, we swap
     Time Complexity: O(n power 2)
     Space Complexity: O(1)
+
+### 25.  SumRootToLeafNumbers:.
+    Problem: root = [1,2,3] represents 1->2, 1->3. Traversing from root to node, we get 2 numbers 12, 13. Adding them the output should be 12+13=25.
+    Algorithm:
+        - Pre-order:
+            -- Preorder traversal follows: root, left right. 
+        Time Complexity: O(n) //since, we have to visit each node
+        Space Complexity: O(height of the binary search tree)        
