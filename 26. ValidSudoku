@@ -1,0 +1,61 @@
+class Solution {
+    public boolean isValidSudoku(char[][] board) {
+        for(int i = 0;i<9;i++){
+            if(!check(i, board, true)){
+                return false;
+            }
+            if(!check(i, board, false)){
+                return false;
+            }
+        }
+        for(int i = 0;i<9;i+=3){
+            for(int j = 0;j<9;j+=3){
+                if(!check(i, j, board)){
+                    return false;
+                }
+            }
+        }
+        return true;
+        
+    }
+    private boolean check(int r, char[][] board, boolean flag){
+        boolean [] check = new boolean[9];
+        char ch = '.';
+        for(int j = 0;j<9;j++){
+            if(flag){
+                ch = board[r][j];
+            }
+            else{
+                ch = board[j][r];
+            }
+            if(!check(ch, check)){
+                return false;
+            }
+        }
+        return true;
+    }
+    private boolean check(int rowBegin, int colBegin, char[][] board){
+        boolean [] check = new boolean[9];
+        int k = 0;
+        int rowEnd = rowBegin+3;
+        int colEnd = colBegin+3;
+        for(int i = rowBegin;i<rowEnd;i++){
+            for(int j = colBegin;j<colEnd;j++){
+                if(!check(board[i][j], check)){
+                    return false;
+                } 
+            }
+        }
+        return true;
+    }
+    private boolean check(char ch, boolean [] check){
+        if(Character.isDigit(ch)){
+            int b = ch-'0'-1;
+            if(check[b]){
+                return false;
+            }
+            check[b] = true;
+        }
+        return true;
+    }
+}
