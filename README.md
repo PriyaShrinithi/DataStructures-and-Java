@@ -104,10 +104,15 @@
     Time Complexity: O(n power 2)
     Space Complexity: O(1)
 
-### 25.  SumRootToLeafNumbers:.
+### 25.  SumRootToLeafNumbers:
     Problem: root = [1,2,3] represents 1->2, 1->3. Traversing from root to node, we get 2 numbers 12, 13. Adding them the output should be 12+13=25.
     Algorithm:
         - Pre-order:
             -- Preorder traversal follows: root, left right. 
         Time Complexity: O(n) //since, we have to visit each node
         Space Complexity: O(height of the binary search tree)        
+
+### 26. ValidSudoku:
+    Problem: Given an incomplete sudoku, check if the problem is a valid sudoku problem
+    Time Complexity: O(row power 2)
+    Space Complexity: O(3*row);
