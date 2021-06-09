@@ -1,0 +1,25 @@
+class MedianFinder {
+
+    /** initialize your data structure here. */
+    PriorityQueue <Integer> maxheap;
+    PriorityQueue <Integer> minheap;
+    public MedianFinder() {
+        maxheap = new PriorityQueue<>(Collections.reverseOrder());//stores the lowest half in reverse order
+        minheap = new PriorityQueue<>();//stores highest half in same order
+    }
+    
+    public void addNum(int num) {
+        maxheap.add(num); //add number to maxheap
+        minheap.add(maxheap.poll()); //remove and add top from maxheap
+        if(maxheap.size()<minheap.size()){ //if maxheapsize is less
+            maxheap.add(minheap.poll()); //add top of minheap
+        }
+    }
+    
+    public double findMedian() {
+        if(maxheap.size()>minheap.size()){
+            return maxheap.peek();    
+        }
+        return (double)(maxheap.peek()+minheap.peek())/2;
+    }
+}
