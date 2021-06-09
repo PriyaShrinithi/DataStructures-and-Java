@@ -116,3 +116,19 @@
     Problem: Given an incomplete sudoku, check if the problem is a valid sudoku problem
     Time Complexity: O(row power 2)
     Space Complexity: O(3*row);
+
+### 27. FindMedianFromDataStream:
+    Problem: If a series of numbers are input to the same object, then find the median of those inputs
+        1. FindMedian() --> contructor
+            - 2 heaps: maxheap and minheap that store the lowest half integers and largest half integers respectively
+        2. add(int num):
+            - add number to maxheap
+            - remove largest number (heap) from maxheap and add to minheap
+            - if maxheap.size<minheap.size
+            - add top from minheap and add to large heap
+        3. median():
+            - if maxheap.size>minheap.size: //indicates odd number of elements
+                    return top of maxheap;
+            - else:
+                    return sum of top of both heaps/2 
+        
