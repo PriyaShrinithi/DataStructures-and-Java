@@ -132,3 +132,9 @@
             - else:
                     return sum of top of both heaps/2 
         
+### 28. ValidateBST (Recursion):
+    - Check if a given bst is valid
+    - for bst to be valid: entire left subtree has to less than root value and the entire right subtree has to greater than root value
+    - else: it is not a valid bst
+    
+### 29.
