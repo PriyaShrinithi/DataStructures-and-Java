@@ -1,0 +1,14 @@
+class Solution {
+    public boolean isValidBST(TreeNode root) {
+        return validate(root, null, null);
+    }
+    private boolean validate(TreeNode root, Integer lowerBound, Integer upperBound){
+        if(root==null){
+            return true;
+        }
+        if((lowerBound!=null && root.val>=lowerBound) || (upperBound!=null && upperBound>=root.val)){
+            return false;
+        }
+        return validate(root.left, root.val, upperBound) && validate(root.right, lowerBound, root.val);
+    }
+}
