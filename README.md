@@ -137,4 +137,8 @@
     - for bst to be valid: entire left subtree has to less than root value and the entire right subtree has to greater than root value
     - else: it is not a valid bst
     
-### 29.
+### 29. Node:
+### 30. Singly Linked List:
+### 31. Stack With Singly Linked List:
+### 32. Stack:
+### 33. Queue: 
