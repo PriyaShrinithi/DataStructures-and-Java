@@ -25,6 +25,9 @@ public class Queue {
             System.out.println("UNDERFLOW");
         }
         else{
+            if(front == rear){
+                rear = null;
+            }
             front = front.next;
             size--;
         }
