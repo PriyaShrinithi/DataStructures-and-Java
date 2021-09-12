@@ -1,0 +1,15 @@
+class Solution {
+    List<Integer> allNodes;
+    public int kthSmallest(TreeNode root, int k) {
+        allNodes = new LinkedList<>();
+        inorderDfs(root);
+        return allNodes.get(k-1);
+    }
+    private void inorderDfs(TreeNode root){
+        if(root!=null){
+            inorderDfs(root.left);
+            allNodes.add(root.val);
+            inorderDfs(root.right);
+        }
+    }
+}
