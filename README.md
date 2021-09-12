@@ -142,3 +142,4 @@
 ### 31. Stack With Singly Linked List:
 ### 32. Stack:
 ### 33. Queue: 
+### 34. kth smallest element in bst (recursion): 
