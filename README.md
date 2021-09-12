@@ -143,3 +143,4 @@
 ### 32. Stack:
 ### 33. Queue: 
 ### 34. kth smallest element in bst (recursion): 
+### 35. kth smallest element in a bst (stack and iteration)
