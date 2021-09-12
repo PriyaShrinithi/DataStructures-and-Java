@@ -1,0 +1,18 @@
+class Solution {
+    Stack<TreeNode> allNodes;
+    public int kthSmallest(TreeNode root, int k) {
+        allNodes = new Stack<>();
+        while(true){
+            while(root!=null){
+                allNodes.push(root);
+                root = root.left;
+            }
+            k--;
+            root = allNodes.pop();
+            if(k==0){
+                return root.val;
+            }
+            root = root.right; //repeats the inner loop if left is present 
+        }
+    }
+}
